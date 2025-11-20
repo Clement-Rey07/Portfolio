@@ -20,7 +20,7 @@ final class ConferenceController extends AbstractController
             <html>
                 <body>
                     $greet
-                    <img src="/images/under-construction2.avif" />
+                    <img src="public/images/under-construction2.avif" />
                 </body>
             </html>
             EOF
