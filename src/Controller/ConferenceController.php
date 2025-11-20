@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ConferenceController extends AbstractController
 {
-    #[Route('/hello/{name}', name: 'homepage')]
+    #[Route('/home', name: 'homepage')]
     public function index(string $name = ''): Response
     {
         $greet = '';
@@ -20,7 +20,7 @@ final class ConferenceController extends AbstractController
             <html>
                 <body>
                     $greet
-                    <img src="C:/Utilisateurs/Kinon/portfolio/public/images/under-construction2.avif" />
+                    <img src="images/under-construction2.avif" />
                 </body>
             </html>
             EOF
