@@ -26,4 +26,7 @@ final class ConferenceController extends AbstractController
             EOF
         );
     }
+HEAD
 }
+}
+c5263b4 (Your commit message)
