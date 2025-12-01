@@ -28,4 +28,3 @@ final class ConferenceController extends AbstractController
         );
     }
 }
-c5263b4 (Your commit message)
