@@ -29,5 +29,4 @@ final class ConferenceController extends AbstractController
     }
 HEAD
 }
-}
 c5263b4 (Your commit message)
