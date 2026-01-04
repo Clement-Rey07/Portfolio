@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ConferenceController extends AbstractController
 {
-    #[Route('/home', name: 'homepage')]
+    #[Route('/', name: 'homepage')]
     public function index(Request $request): Response
     {
     dump($request);
