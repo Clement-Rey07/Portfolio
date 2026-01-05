@@ -42,21 +42,26 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="{{ path('homepage') }}">Accueil</a>
-        <a href="#">Projets</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+<div class="background-pattern">
 
-<div class="container">
-    {% block body %}{% endblock %}
+    <header>
+        <nav>
+            <a href="{{ path('homepage') }}">Accueil</a>
+            <a href="{{ path('projects') }}">Projets</a>
+            <a href="{{ path('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+
+    <footer>
+        © {{ "now"|date("Y") }} - Mon Portfolio
+    </footer>
+
 </div>
 
-<footer>
-    © {{ "now"|date("Y") }} - Mon Portfolio
-</footer>
-
 </body>
+
 </html>
