@@ -1,6 +1,4 @@
-/* style.css */
 
-/* 1. Configuration globale et Fond Universe.io */
 body {
     margin: 0;
     padding: 0;
@@ -8,7 +6,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 
-    /* Variables du pattern */
+    
     --s: 200px; 
     --c1: #1d1d1d;
     --c2: #4e4f51;
@@ -21,7 +19,7 @@ body {
     background-size: var(--s) calc(var(--s) * 0.577);
     background-attachment: fixed;
 }
-/* Style du bouton "Gradient Button" converti de Tailwind vers CSS Pur */
+
 .btn-gradient {
     position: relative;
     height: 3rem;
@@ -38,7 +36,7 @@ body {
     justify-content: center;
 }
 
-/* Bordure dégradée (le contour) */
+
 .btn-gradient .border-layer {
     position: absolute;
     inset: 0;
@@ -55,7 +53,6 @@ body {
     opacity: 0.9;
 }
 
-/* Couches internes de dégradés */
 .btn-gradient .inner-layers {
     position: absolute;
     inset: 2px;
@@ -74,7 +71,7 @@ body {
     z-index: 2;
 }
 
-/* Texte avec dégradé et lueur */
+
 .btn-gradient .text-content {
     position: relative;
     z-index: 10;
@@ -88,7 +85,7 @@ body {
     letter-spacing: -0.05em;
 }
 
-/* Effet au survol (Hover) */
+
 .btn-gradient .hover-effect {
     position: absolute;
     inset: 2px;
@@ -117,7 +114,7 @@ body {
     background: white;
     box-shadow: 0 0 15px #00d4ff;
 }
-/* Espacement pour les boutons dans la page d'accueil */
+
 .actions {
     display: flex;
     gap: 20px;
@@ -125,9 +122,9 @@ body {
     flex-wrap: wrap;
 }
 
-/* 2. Navigation / Header */
+
 header {
-    background: rgba(15, 23, 42, 0.9); /* Sombre avec légère transparence */
+    background: rgba(15, 23, 42, 0.9); 
     padding: 15px 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -145,23 +142,23 @@ nav a:hover {
     text-decoration: none;
 }
 
-/* 3. Le Container (Effet de verre / Glassmorphism) */
+
 .container {
     max-width: 900px;
     margin: 50px auto;
     padding: 40px;
-    /* C'est ici qu'on gère la transparence pour voir le fond */
+    
     background: rgba(255, 255, 255, 0.05); 
-    backdrop-filter: blur(12px); /* Floute le fond derrière le bloc */
+    backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* 4. Titres et Textes */
+
 h1, h2 {
-    color: #00d4ff; /* Bleu cyan brillant */
+    color: #00d4ff; 
     margin-top: 0;
 }
 
@@ -171,7 +168,7 @@ p {
     color: #e2e8f0;
 }
 
-/* 5. Footer */
+
 footer {
     text-align: center;
     padding: 30px;
