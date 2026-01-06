@@ -42,10 +42,11 @@ footer {
 }
 /* Background Universe of UI */
 .background-pattern {
-  min-height: 100vh;
-  width: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
 
-  --s: 200px; /* control the size */
+  --s: 200px;
   --c1: #1d1d1d;
   --c2: #4e4f51;
   --c3: #3c3c3c;
@@ -66,3 +67,4 @@ footer {
 
   background-size: var(--s) calc(var(--s) * 0.577);
 }
+
