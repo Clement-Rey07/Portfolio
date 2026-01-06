@@ -18,18 +18,19 @@
             <strong>PHP et Symfony</strong>.
         </p>
 
-        <div class="actions" style="display: flex; gap: 20px; flex-wrap: wrap;">
-            {# Bouton générateur de CV #}
+        <div class="actions">
+            
             <a href="{{ path('registration') }}" class="btn-gradient">
-                <div class="border-layer"><div class="bg-dark"></div></div>
+                <div class="border-layer">
+                    <div class="bg-dark"></div>
+                </div>
                 <div class="inner-layers"></div>
                 <div class="gradient-overlay"></div>
                 <div class="hover-effect"></div>
-                <span class="text-content">Créer un CV</span>
+                <span class="text-content">Créer mon CV</span>
             </a>
-
-            <a href="{{ asset('cv/mon_cv.pdf') }}" class="btn-download" download>
-                <span class="text-content">Télécharger mon CV</span>
+            <a href="{{ asset('uploads/cv/mon_cv.pdf') }}" class="btn-download" download>
+                Télécharger mon CV (PDF)
             </a>
         </div>
     </section>

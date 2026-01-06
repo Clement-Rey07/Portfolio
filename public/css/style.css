@@ -103,6 +103,39 @@ body {
     opacity: 1;
 }
 
+/* Style du bouton de téléchargement du CV */
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    height: 3rem;
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    border: 1px solid #00d4ff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-download:hover {
+    background: #00d4ff;
+    color: #170928;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Espacement pour les boutons dans la page d'accueil */
+.actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
 /* 2. Navigation / Header */
 header {
     background: rgba(15, 23, 42, 0.9); /* Sombre avec légère transparence */
