@@ -104,19 +104,17 @@ body {
 }
 
 .btn-download {
-    background: #00d4ff; /* Cyan solid */
-    color: #170928;      /* Deep dark text */
+    background: #00d4ff;
+    color: #170928;
     padding: 12px 24px;
-    border: none;
     border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
-    transition: 0.3s;
-    cursor: pointer;
     display: inline-flex;
+    transition: 0.3s;
 }
 .btn-download:hover {
-    background: #ffffff;
+    background: white;
     box-shadow: 0 0 15px #00d4ff;
 }
 /* Espacement pour les boutons dans la page d'accueil */
