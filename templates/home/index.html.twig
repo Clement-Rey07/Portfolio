@@ -3,26 +3,34 @@
 {% block title %}Accueil - Mon Portfolio{% endblock %}
 
 {% block body %}
+    <section class="hero-section">
+        <h1>Bienvenue sur mon portfolio</h1>
+        
+        <p class="description">
+            Passionné par l’informatique et le développement web, j’ai découvert cet univers lors de mon 
+            <strong>BAC STI2D</strong>, où j’ai pu m’initier aux bases de la programmation, des systèmes 
+            informatiques et des technologies numériques. 
+        </p>
 
-<h1>Bienvenue sur mon portfolio !</h1>
+        <p class="description">
+            Cette première approche a été un véritable déclencheur : depuis, je n’ai cessé d’approfondir 
+            mes connaissances et de développer mes compétences, notamment en développement web avec 
+            <strong>PHP et Symfony</strong>.
+        </p>
 
-<p>
-    Bonjour, je suis <strong>Clément</strong>, étudiant en Réseaux et Télécommunication.
-</p>
+        <div class="actions" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            {# Bouton générateur de CV #}
+            <a href="{{ path('registration') }}" class="btn-gradient">
+                <div class="border-layer"><div class="bg-dark"></div></div>
+                <div class="inner-layers"></div>
+                <div class="gradient-overlay"></div>
+                <div class="hover-effect"></div>
+                <span class="text-content">Créer un CV</span>
+            </a>
 
-<h2>À propos de moi</h2>
-<p>
-    J'adore apprendre de nouvelles choses surtout quand il s'agit d'informatique :
-    Programmation, cybersécurité, multimédia, éléctronique, packer tracer etc.
-</p>
-
-<h2>Projets récents</h2>
-<ul>
-    <li>Projet 1 : Description rapide</li>
-    <li>Projet 2 : Description rapide</li>
-    <li>Projet 3 : Description rapide</li>
-</ul>
-
-<img src="/images/under-construction2.avif" alt="En construction">
-
+            <a href="{{ asset('cv/mon_cv.pdf') }}" class="btn-download" download>
+                <span class="text-content">Télécharger mon CV</span>
+            </a>
+        </div>
+    </section>
 {% endblock %}

@@ -1,13 +1,113 @@
+/* style.css */
+
+/* 1. Configuration globale et Fond Universe.io */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f6f8;
-    color: #333;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
+    /* Variables du pattern */
+    --s: 200px; 
+    --c1: #1d1d1d;
+    --c2: #4e4f51;
+    --c3: #3c3c3c;
+
+    background: 
+        repeating-conic-gradient(from 30deg, #0000 0 120deg, var(--c3) 0 180deg) 
+        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+        repeating-conic-gradient(from 30deg, var(--c1) 0 60deg, var(--c2) 0 120deg, var(--c3) 0 180deg);
+    background-size: var(--s) calc(var(--s) * 0.577);
+    background-attachment: fixed;
+}
+/* Style du bouton "Gradient Button" converti de Tailwind vers CSS Pur */
+.btn-gradient {
+    position: relative;
+    height: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Bordure dégradée (le contour) */
+.btn-gradient .border-layer {
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    padding: 2px;
+    background: linear-gradient(to bottom, #654358, #17092A, #2F0D64);
+}
+
+.btn-gradient .bg-dark {
+    position: absolute;
+    inset: 0;
+    background: #170928;
+    border-radius: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Couches internes de dégradés */
+.btn-gradient .inner-layers {
+    position: absolute;
+    inset: 2px;
+    background: #170928;
+    border-radius: 0.5rem;
+    opacity: 0.95;
+    z-index: 1;
+}
+
+.btn-gradient .gradient-overlay {
+    position: absolute;
+    inset: 2px;
+    background: linear-gradient(to right, #170928, #1d0d33, #170928);
+    border-radius: 0.5rem;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+/* Texte avec dégradé et lueur */
+.btn-gradient .text-content {
+    position: relative;
+    z-index: 10;
+    font-size: 1.125rem;
+    font-weight: 400;
+    background: linear-gradient(to bottom, #D69DDE, #B873F8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 12px rgba(199, 135, 246, 0.4));
+    letter-spacing: -0.05em;
+}
+
+/* Effet au survol (Hover) */
+.btn-gradient .hover-effect {
+    position: absolute;
+    inset: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: linear-gradient(to right, rgba(42, 23, 54, 0.2), rgba(199, 135, 246, 0.1), rgba(42, 23, 54, 0.2));
+    border-radius: 0.5rem;
+    z-index: 5;
+}
+
+.btn-gradient:hover .hover-effect {
+    opacity: 1;
+}
+
+/* 2. Navigation / Header */
 header {
-    background: #0f172a;
+    background: rgba(15, 23, 42, 0.9); /* Sombre avec légère transparence */
     padding: 15px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav a {
@@ -15,56 +115,45 @@ nav a {
     text-decoration: none;
     margin-right: 20px;
     font-weight: 600;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #00d4ff;
+    text-decoration: none;
 }
 
+/* 3. Le Container (Effet de verre / Glassmorphism) */
 .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    /* C'est ici qu'on gère la transparence pour voir le fond */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(12px); /* Floute le fond derrière le bloc */
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
+/* 4. Titres et Textes */
 h1, h2 {
-    color: #0f172a;
+    color: #00d4ff; /* Bleu cyan brillant */
+    margin-top: 0;
 }
 
+p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
+
+/* 5. Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #0f172a;
-    color: white;
-    margin-top: 40px;
-}
-/* Background Universe of UI */
-.background-pattern {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
-  --s: 200px;
-  --c1: #1d1d1d;
-  --c2: #4e4f51;
-  --c3: #3c3c3c;
-
-  background:
-    repeating-conic-gradient(
-        from 30deg,
-        #0000 0 120deg,
-        var(--c3) 0 180deg
-      )
-      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-    repeating-conic-gradient(
-      from 30deg,
-      var(--c1) 0 60deg,
-      var(--c2) 0 120deg,
-      var(--c3) 0 180deg
-    );
-
-  background-size: var(--s) calc(var(--s) * 0.577);
+    padding: 30px;
+    color: #94a3b8;
+    font-size: 0.9rem;
 }
 

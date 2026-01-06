@@ -1,20 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RegistrationController!{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Créer mon CV</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    {{ form_start(form) }}
+        {{ form_rest(form) }} 
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/Kinon/portfolio/src/Controller/RegistrationController.php</code></li>
-        <li>Your template at <code>C:/Users/Kinon/portfolio/templates/registration/index.html.twig</code></li>
-    </ul>
-</div>
+        <button type="submit" class="btn-gradient" style="margin-top: 20px;">
+            <div class="border-layer"><div class="bg-dark"></div></div>
+            <div class="inner-layers"></div>
+            <div class="gradient-overlay"></div>
+            <div class="hover-effect"></div>
+            <span class="text-content">Générer mon CV</span>
+        </button>
+    {{ form_end(form) }}
 {% endblock %}
